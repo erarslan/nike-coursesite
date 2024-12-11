@@ -1,8 +1,12 @@
 import { headerLogo } from "../assets/images";
 import { navLinks } from "../cons";
-
+import { useState } from "react";
 import { hamburger } from "../assets/icons";
+import Menu from "./Menu";
+
 const Nav = () => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <header className="absolute z-10 w-full padding-x py-8">
       <nav className="flex justify-between items-center max-container">
@@ -21,9 +25,15 @@ const Nav = () => {
             </li>
           ))}
         </ul>
-        <div className="lg:hidden">
-          <img src={hamburger} alt="Hamburger" width={25} />
+        <div
+          onClick={() => {
+            setIsActive(!isActive);
+          }}
+          className="button lg:hidden"
+        >
+          <div className={`burger ${isActive ? "burger-active" : ""}`}></div>
         </div>
+        {isActive && <Menu />}
       </nav>
     </header>
   );

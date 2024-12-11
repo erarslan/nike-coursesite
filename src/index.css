@@ -18,6 +18,89 @@
     margin: 0 auto;
   }
 
+  .button {
+    position: fixed;
+    right: 0;
+    margin: 20px;
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    background-color: #fe6452;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .burger {
+    width: 100%;
+  }
+
+  .burger::after,
+  .burger::before {
+    content: "";
+    display: block;
+    width: 40%;
+    background-color: white;
+    height: 1px;
+    margin: auto;
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  .burger::after {
+    top: -5px;
+  }
+
+  .burger::before {
+    top: 5px;
+  }
+
+  .burger-active::after {
+    top: -1px;
+    transform: rotate(45deg);
+  }
+
+  .burger-active::before {
+    top: 0px;
+    transform: rotate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: rgb(41, 41, 41);
+    color: white;
+  }
+
+  .body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 56px;
+    gap: 12px;
+    margin-top: 80px;
+  }
+
+  .header {
+    color: rgb(153, 153, 153);
+    border-bottom: 1px solid rgb(153, 153, 153);
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 40px;
+  }
+
   .input {
     @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
   }

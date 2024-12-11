@@ -49,6 +49,32 @@ export const statistics = [
   { value: "250k+", label: "Customers" },
 ];
 
+export const navItems = [
+  {
+    title: "Home",
+
+    href: "/",
+  },
+
+  {
+    title: "Work",
+
+    href: "/work",
+  },
+
+  {
+    title: "About",
+
+    href: "/about",
+  },
+
+  {
+    title: "Contact",
+
+    href: "/contact",
+  },
+];
+
 export const products = [
   {
     imgURL: shoe4,

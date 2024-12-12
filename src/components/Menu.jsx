@@ -3,7 +3,7 @@ import Link from "./Link";
 
 const Menu = () => {
   return (
-    <div className="menu">
+    <div className="menu lg:hidden">
       <div className="body">
         <div className="nav">
           <div className="header">

@@ -2,6 +2,7 @@ import { headerLogo } from "../assets/images";
 import { navLinks } from "../cons";
 import { useState } from "react";
 import { hamburger } from "../assets/icons";
+import { AnimatePresence } from "motion/react";
 import Menu from "./Menu";
 
 const Nav = () => {
@@ -33,7 +34,7 @@ const Nav = () => {
         >
           <div className={`burger ${isActive ? "burger-active" : ""}`}></div>
         </div>
-        {isActive && <Menu />}
+        <AnimatePresence mode="wait">{isActive && <Menu />}</AnimatePresence>
       </nav>
     </header>
   );

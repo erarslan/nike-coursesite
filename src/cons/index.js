@@ -173,10 +173,10 @@ export const socialMedia = [
 
 export const menuSlide = {
   initial: { x: "calc(100% + 100px)" },
-  enter: { x: "0", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
+  enter: { x: "0", transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] } },
   exit: {
     x: "calc(100% + 100px)",
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 1, ease: [0.25, 1, 0.5, 1] },
   },
 };
 
@@ -184,11 +184,11 @@ export const slide = {
   initial: { x: 80 },
   enter: (i) => ({
     x: 0,
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i },
+    transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1], delay: 0.05 * i },
   }),
   exit: (i) => ({
     x: 80,
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i },
+    transition: { duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.05 * i },
   }),
 };
 

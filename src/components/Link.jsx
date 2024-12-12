@@ -6,6 +6,7 @@ const Link = ({ data }) => {
 
   return (
     <motion.div
+      custom={index}
       variants={slide}
       initial="initial"
       animate="enter"

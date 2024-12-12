@@ -1,9 +1,17 @@
 import { navItems } from "../cons";
 import Link from "./Link";
+import { menuSlide } from "../cons";
+import { motion } from "motion/react";
 
 const Menu = () => {
   return (
-    <div className="menu lg:hidden">
+    <motion.div
+      variants={menuSlide}
+      animate="enter"
+      exit="exit"
+      initial="initial"
+      className="menu lg:hidden"
+    >
       <div className="body">
         <div className="nav">
           <div className="header">
@@ -14,7 +22,7 @@ const Menu = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

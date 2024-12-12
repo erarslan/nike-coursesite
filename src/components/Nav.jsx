@@ -8,7 +8,7 @@ const Nav = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <header className="absolute z-10 w-full padding-x py-8">
+    <header className="absolute z-20 w-full padding-x py-8">
       <nav className="flex justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} alt="logo" width={130} />

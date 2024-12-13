@@ -10,10 +10,15 @@ import {
 } from "./sections";
 
 import Nav from "./components/Nav";
+import PreLoader from "./components/PreLoader";
+import { useState } from "react";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <main className="relative">
+      {isLoading && <PreLoader />}
       <Nav />
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />

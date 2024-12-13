@@ -11,7 +11,7 @@ const Menu = () => {
       animate="enter"
       exit="exit"
       initial="initial"
-      className="menu lg:hidden"
+      className="menu lg:hidden max-sm:w-full"
     >
       <div className="body">
         <div className="nav">

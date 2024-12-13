@@ -16,6 +16,17 @@ body {
   cursor: wait;
 }
 
+svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+
+path {
+  fill: #141516;
+}
+
 @layer components {
   .max-container {
     max-width: 1440px;

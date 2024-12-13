@@ -22,7 +22,7 @@ const Menu = () => {
             <Link key={index} data={{ ...item, index }} />
           ))}
         </div>
-        <div className="flex justify-between gap-10 text-[12px]">
+        <div className="flex justify-between gap-10 max-lg:gap-5 text-[12px]">
           <a>Awwwards</a>
           <a>Instagram</a>
           <a>Dribble</a>

@@ -11,14 +11,27 @@ import {
 
 import Nav from "./components/Nav";
 import PreLoader from "./components/PreLoader";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "motion/react";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    (async () => {
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+      }, 2000);
+    })();
+  }, []);
+
   return (
     <main className="relative">
-      {isLoading && <PreLoader />}
+      <AnimatePresence mode="wait">
+        {isLoading && <PreLoader />}
+      </AnimatePresence>
+
       <Nav />
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />

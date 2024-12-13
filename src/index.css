@@ -12,6 +12,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  cursor: wait;
+}
+
 @layer components {
   .max-container {
     max-width: 1440px;

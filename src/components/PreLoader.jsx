@@ -67,6 +67,7 @@ const PreLoader = () => {
 
           <svg>
             <motion.path
+              className="fill-[#141516]"
               variants={curve}
               initial="initial"
               exit="exit"
